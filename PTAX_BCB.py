@@ -18,7 +18,7 @@ def busca_cotacoes(index, **kwargs):
     code_chunk = [codes[i::chunks] for i in range(chunks)][index]
     
     data_fim = (datetime.today() - timedelta(days=1)).strftime('%d/%m/%Y')
-    data_ini = (datetime.today() - timedelta(days=9)).strftime('%d/%m/%Y')
+    data_ini = (datetime.today() - timedelta(days=2)).strftime('%d/%m/%Y')
     full_df = pd.DataFrame()
 
     for code in code_chunk:
