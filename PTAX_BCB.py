@@ -39,7 +39,7 @@ def busca_cotacoes(index, **kwargs):
 def consolidar_dados(**kwargs):
     columns = ["Categoria de dados do mercado","De","Até","Categoria de taxa de câmbio","Data da efetividade","Tempo de valor (obsoleto)","Taxa de câmbio","Moeda de cotação de segurança (obsoleto)","Fator origem","Fator destino","Cotação","Período de validade efetivo (obsoleto)","Status","Mensagem"]
     frames = []
-    for i in range(4):  # assuming 4 chunks
+    for i in range(4):
         df = pd.read_csv(f'/opt/airflow/data/PTAX_{i}.csv', sep=',')
         frames.append(df)
     full_df = pd.concat(frames, axis=0)
